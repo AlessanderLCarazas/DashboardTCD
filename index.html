@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Propagación y Olas Pandémicas del COVID</title>
     <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/d3-geo.v2.min.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,45 +15,16 @@
     <div class="container">
         <div class="sidebar">
             <div>
-                <label>Seleccionar Continente:</label>
-                <div id="continent-tags"></div>
-            </div>
-            <div>
-                <label>Seleccionar País:</label>
-                <div id="country-tags"></div>
+                <label>Seleccionar Variables:</label>
+                <div id="variable-tags"></div>
+                <button id="reset-button">Reestablecer</button>
             </div>
         </div>
         <div class="content">
-            <div class="selection-box-container">
-                <div id="selected-countries-box">
-                    <span>Países seleccionados: </span>
-                    <span id="selected-countries">Ninguno</span>
-                </div>
-                <button id="reset-button">Restablecer</button>
+            <div class="columns">
+                <div class="column" id="column1"></div>
+                <div class="column" id="column2"></div>
             </div>
-            <div id="timeline-container">
-                <div class="timeline">
-                    <div class="horizontal-bar"></div>
-                    <div class="vertical-bar" id="start-bar"></div>
-                    <div class="vertical-bar" id="end-bar"></div>
-                    <div class="date-label" id="start-label">Enero 2020</div>
-                    <div class="date-label" id="end-label">Enero 2025</div>
-                </div>
-            </div>
-            <div id="charts-container">
-                <div id="cases-vs-deaths-chart" class="chart"></div>
-                <div id="new-cases-chart" class="chart"></div>
-                <div id="new-deaths-chart" class="chart"></div>
-                <div id="vaccinations-chart" class="chart"></div>
-                <div id="total-cases-chart" class="chart"></div>
-                <div id="total-deaths-chart" class="chart"></div>
-                <div id="vaccination-rate-chart" class="chart"></div>
-                <div id="death-rate-chart" class="chart"></div>
-                <div id="recovery-rate-chart" class="chart"></div>
-                <div id="population-impact-chart" class="chart"></div>
-            </div>
-            <div id="propagation-chart" class="propagation-chart"></div>
-            <div id="data-container"></div>
         </div>
     </div>
     <script src="script.js"></script>
